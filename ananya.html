@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Ananya 💗</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Comic Sans MS', cursive;
+    background: linear-gradient(135deg,#ffd6ec,#ffeef7,#fff5fa);
+    overflow:hidden;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+    transition:0.6s ease;
+    opacity:0;
+    transform:translateX(100%);
+}
+
+.slide.active{
+    opacity:1;
+    transform:translateX(0);
+}
+
+h1{
+    color:#ff4da6;
+    margin-bottom:20px;
+}
+
+p{
+    max-width:600px;
+    font-size:20px;
+    color:#444;
+}
+
+.flower{
+    font-size:60px;
+    margin-bottom:20px;
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+    100%{transform:translateY(0);}
+}
+
+.nav button{
+    background:#ff99cc;
+    border:none;
+    padding:10px 20px;
+    border-radius:20px;
+    color:white;
+    font-size:16px;
+    margin:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.nav button:hover{
+    background:#ff4da6;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Slide 1 -->
+<div class="slide active">
+<div class="flower">🌸💐🌹</div>
+<h1>Hi Ananya 💗</h1>
+<p>
+You are genuinely one of the best friends anyone could ever ask for.
+Thank you for being with me whenever I needed you.
+Thank you for always showing up.
+And honestly… thank you for never letting me die.
+</p>
+<div class="nav">
+<button onclick="nextSlide()">✨ Sunshine Door</button>
+</div>
+</div>
+
+<!-- Slide 2 -->
+<div class="slide">
+<div class="flower">🌼🌷💐</div>
+<h1>My Sunshine ☀️</h1>
+<p>
+You make hard days softer.
+You make normal days better.
+You make good days unforgettable.
+You are warmth in human form.
+</p>
+<div class="nav">
+<button onclick="prevSlide()">🏡 Cozy Start</button>
+<button onclick="nextSlide()">🌷 Petal Path</button>
+</div>
+</div>
+
+<!-- Slide 3 -->
+<div class="slide">
+<div class="flower">🌺🤍🌸</div>
+<h1>Softest Heart 🌷</h1>
+<p>
+You listen without judging.
+You stay without complaining.
+You care without limits.
+Here are lilies just for you.
+</p>
+<div class="nav">
+<button onclick="prevSlide()">☀️ Back to Sunshine</button>
+<button onclick="nextSlide()">✨ Sparkle Trail</button>
+</div>
+</div>
+
+<!-- Slide 4 -->
+<div class="slide">
+<div class="flower">🌷🌷🌷</div>
+<h1>My Safe Place ✨</h1>
+<p>
+Whenever things felt heavy, you stayed.
+You never walked away.
+You are loyal in ways people only wish they could be.
+Take these tulips.
+</p>
+<div class="nav">
+<button onclick="prevSlide()">🌸 Petal Path</button>
+<button onclick="nextSlide()">🌼 Secret Garden</button>
+</div>
+</div>
+
+<!-- Slide 5 -->
+<div class="slide">
+<div class="flower">🌻🌺🌹</div>
+<h1>Secret Garden 🌼</h1>
+<p>
+You have seen my worst moods and still chose to stay.
+That means more than you know.
+Thank you for protecting me.
+Here is an entire garden for you.
+</p>
+<div class="nav">
+<button onclick="prevSlide()">✨ Sparkle Trail</button>
+<button onclick="nextSlide()">🤍 Warm Hug</button>
+</div>
+</div>
+
+<!-- Slide 6 -->
+<div class="slide">
+<div class="flower">🤍🌹🤍</div>
+<h1>Warm Hug 🤍</h1>
+<p>
+You never let me feel alone.
+You never let me give up.
+And somehow, you always know when something is wrong.
+You are rare.
+</p>
+<div class="nav">
+<button onclick="prevSlide()">🌼 Secret Garden</button>
+<button onclick="nextSlide()">🌹 Rose Room</button>
+</div>
+</div>
+
+<!-- Slide 7 -->
+<div class="slide">
+<div class="flower">💐💐💐</div>
+<h1>Forever Grateful 🌹</h1>
+<p>
+Thank you for every late night talk.
+Every laugh.
+Every time you made sure I was okay.
+You deserve all the flowers in the world.
+</p>
+<div class="nav">
+<button onclick="prevSlide()">🤍 Warm Hug</button>
+<button onclick="nextSlide()">💖 Forever Page</button>
+</div>
+</div>
+
+<!-- Slide 8 -->
+<div class="slide">
+<div class="flower">🌸🌷🌹💐🌺</div>
+<h1>Forever My Friend 💖</h1>
+<p>
+Ananya,
+You are one of the most important people in my life.
+Thank you for always being there.
+Thank you for caring.
+Thank you for saving me in ways you do not even realize.
+Never change.
+</p>
+<div class="nav">
+<button onclick="prevSlide()">🌹 Rose Room</button>
+</div>
+</div>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index){
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+}
+
+function nextSlide(){
+    if(currentSlide < slides.length - 1){
+        currentSlide++;
+        showSlide(currentSlide);
+    }
+}
+
+function prevSlide(){
+    if(currentSlide > 0){
+        currentSlide--;
+        showSlide(currentSlide);
+    }
+}
+</script>
+
+</body>
+</html>
